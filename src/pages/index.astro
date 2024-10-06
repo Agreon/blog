@@ -1,12 +1,11 @@
 ---
 import { getEntry } from "astro:content";
-import PageLayout from "../layouts/page-layout.astro"
+import PageLayout from "@layouts/page-layout.astro";
 
-const homePage = await getEntry('pages', 'home/home');
+const homePage = await getEntry("pages", "home/home");
 const { Content } = await homePage.render();
 ---
 
 <PageLayout title={homePage.data.title} description={homePage.data.description}>
-	<Content />
+  <Content />
 </PageLayout>
-
