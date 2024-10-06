@@ -31,4 +31,4 @@ jobs:
       - name: Deploy
         env:
           RSYNC_PASSWORD: ${{ secrets.SSH_PASS }}
-        run: rsync -vzr --delete ./dist ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/opt/blog/dist
+        run: rsync -vzr -e 'ssh -o StrictHostKeyChecking=no -p 22' --delete ./dist ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/opt/blog/dist
