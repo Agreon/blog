@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+html {
+  background-color: $background-color;
+  max-width: 70ch;
+  padding-top: $padding-top;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  color: $font-color;
+}
+
+body {
+  min-height: calc(100vh - $padding-top);
+  display: flex;
+  flex-direction: column;
+}
+
+// So that the footer is always at the bottom, even on pages without much content
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2em 0 1em;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 1.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
