@@ -1,7 +1,23 @@
 ---
 import PageLayout from "@layouts/page-layout.astro";
+import { getCollection } from "astro:content";
+
+import "@styles/projects.scss";
+
+const projects = await getCollection("projects");
 ---
 
 <PageLayout title="Projects I've done" description="Agreons Projects">
-  <p>Here are some of the projects I've done</p>
+  <ul>
+    {
+      projects.map((project) => (
+        <li>
+          <a href={`projects/${project.slug}`}>
+            <h3 class="project-list-title">{project.data.title}</h3>
+            <p class="project-description">{project.data.description}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </PageLayout>

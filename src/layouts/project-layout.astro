@@ -1,0 +1,30 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import Nav from "@components/Nav.astro";
+import type { ProjectProps } from "src/content/config";
+
+import "@styles/projects.scss";
+
+type Props = ProjectProps;
+const { title, description, tags, repo, website } = Astro.props;
+---
+
+<html lang="en">
+  <BaseHead title={title} description={description} />
+  <body>
+    <Nav />
+    <header>
+      <h1 class="project-title">{title}</h1>
+      <div class="tags">{tags.map((tag) => <span>{tag}</span>)}</div>
+      <div class="links">
+        <span><a href={website}>&#x1F517; Website</a></span>
+        <span><a href={repo}>&#x1F517; Repo</a></span>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

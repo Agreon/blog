@@ -1,0 +1,41 @@
+@import "./variables.scss";
+
+.project-title {
+  margin-bottom: 0;
+}
+
+.project-description {
+  margin-top: 0;
+}
+
+.project-list-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+header {
+  .tags {
+    color: gray;
+    font-size: 0.75rem;
+
+    span {
+      margin-left: 0.8rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .links {
+    margin-top: 0.5rem;
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+}

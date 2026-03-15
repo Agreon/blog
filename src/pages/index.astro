@@ -6,6 +6,6 @@ const homePage = await getEntry("pages", "home/home");
 const { Content } = await homePage.render();
 ---
 
-<PageLayout title={homePage.data.title} description={homePage.data.description}>
+<PageLayout {...homePage.data}>
   <Content />
 </PageLayout>
