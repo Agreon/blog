@@ -12,7 +12,7 @@ const projects = await getCollection("projects");
     {
       projects.map((project) => (
         <li>
-          <a href={`projects/${project.slug}`}>
+          <a href={`/projects/${project.slug}`}>
             <h3 class="project-list-title">{project.data.title}</h3>
             <p class="project-description">{project.data.description}</p>
           </a>
