@@ -1,4 +1,14 @@
-$padding-top: 2em;
-$background-color: #f9f9f9;
-$font-color: #333;
-$link-color: #b85042;
+:root {
+  color-scheme: light dark;
+
+  --padding-top: 2em;
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+  --font-color: #333333;
+  --muted-color: #767676;
+  --link-color: #b85042;
+  --link-color-hover: #96392e;
+  --accent-color: #b85042;
+  --accent-color-soft: rgb(184 80 66 / 12%);
+  --border-color: #e5e0dc;
+}

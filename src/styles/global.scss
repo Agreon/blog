@@ -1,18 +1,26 @@
 @use "./variables.scss" as *;
+@use "./fonts.scss";
 
 html {
-  background-color: $background-color;
+  background-color: var(--background-color);
   max-width: 70ch;
-  padding-top: $padding-top;
+  padding-top: var(--padding-top);
   margin: auto;
   line-height: 1.5;
   font-size: 1.25rem;
-  font-family: sans-serif;
-  color: $font-color;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: var(--font-color);
 }
 
 body {
-  min-height: calc(100vh - $padding-top);
+  min-height: calc(100vh - var(--padding-top));
   display: flex;
   flex-direction: column;
 }
@@ -29,6 +37,9 @@ h4,
 h5,
 h6 {
   margin: 2em 0 1em;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 p,
@@ -43,10 +54,11 @@ img {
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: none;
 
   &:hover {
+    color: var(--link-color-hover);
     text-decoration: underline;
   }
 }
