@@ -2,7 +2,7 @@
 import BaseHead from "@components/BaseHead.astro";
 import Footer from "@components/Footer.astro";
 import Nav from "@components/Nav.astro";
-import type { BlogProps } from "src/content/config";
+import type { BlogProps } from "src/content.config";
 
 import "@styles/blog.scss";
 
@@ -27,7 +27,7 @@ const formattedDate = date.toLocaleDateString("en-US", {
         {
           tags.length > 0 && (
             <span class="tags">
-              {tags.map((tag) => (
+              {tags.map((tag: string) => (
                 <span>{tag}</span>
               ))}
             </span>

@@ -2,7 +2,7 @@
 import BaseHead from "@components/BaseHead.astro";
 import Footer from "@components/Footer.astro";
 import Nav from "@components/Nav.astro";
-import type { ProjectProps } from "src/content/config";
+import type { ProjectProps } from "src/content.config";
 
 import "@styles/projects.scss";
 
@@ -16,7 +16,7 @@ const { title, description, tags, repo, website } = Astro.props;
     <Nav />
     <header>
       <h1 class="project-title">{title}</h1>
-      <div class="tags">{tags.map((tag) => <span>{tag}</span>)}</div>
+      <div class="tags">{tags.map((tag: string) => <span>{tag}</span>)}</div>
       <div class="links">
         <span><a href={website}>&#x1F517; Website</a></span>
         <span><a href={repo}>&#x1F517; Repo</a></span>
