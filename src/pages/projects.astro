@@ -8,7 +8,7 @@ const projects = await getCollection("projects");
 ---
 
 <PageLayout title="Projects I've done" description="Agreons Projects">
-  <ul>
+  <ul class="projects-list">
     {
       projects.map((project) => (
         <li>

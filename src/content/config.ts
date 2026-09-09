@@ -15,6 +15,13 @@ const projectSchema = z.object({
 });
 export type ProjectProps = z.infer<typeof projectSchema>;
 
+const blogSchema = z.object({
+  title: z.string(),
+  date: z.date(),
+  tags: z.array(z.string()).default([]),
+});
+export type BlogProps = z.infer<typeof blogSchema>;
+
 export const collections = {
   pages: defineCollection({
     type: "content",
@@ -23,5 +30,9 @@ export const collections = {
   projects: defineCollection({
     type: "content",
     schema: projectSchema,
+  }),
+  blog: defineCollection({
+    type: "content",
+    schema: blogSchema,
   }),
 };
