@@ -9,15 +9,13 @@ const projects = await getCollection("projects");
 
 <PageLayout title="Projects I've done" description="Agreons Projects">
   <ul class="projects-list">
-    {
-      projects.map((project) => (
-        <li>
-          <a href={`/projects/${project.id}`}>
-            <h3 class="project-list-title">{project.data.title}</h3>
-            <p class="project-description">{project.data.description}</p>
-          </a>
-        </li>
-      ))
-    }
+    {projects.map((project) => (
+      <li>
+        <a href={`/projects/${project.id}`}>
+          <h3 class="project-list-title">{project.data.title}</h3>
+          <p class="project-description">{project.data.description}</p>
+        </a>
+      </li>
+    ))}
   </ul>
 </PageLayout>
